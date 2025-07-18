@@ -31,6 +31,9 @@ def make_request(
         temperature=temperature,
         n=n,
         top_p=0.95,
+        extra_body={
+            "chat_template_kwargs": {"enable_thinking": False},
+        },
         **kwargs
     )
 
