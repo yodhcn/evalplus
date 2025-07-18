@@ -28,10 +28,6 @@ jobs:
         run: |
           docker save ${{ env.IMAGE_NAME }}:latest -o ${{ env.IMAGE_NAME }}.tar
 
-      - name: Compress image tar to zip
-        run: |
-          zip ${{ env.IMAGE_NAME }}.zip ${{ env.IMAGE_NAME }}.tar
-
       - name: Upload artifact (Docker image tar)
         uses: actions/upload-artifact@v4
         with:
