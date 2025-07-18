@@ -32,8 +32,8 @@ jobs:
         run: |
           zip ${{ env.IMAGE_NAME }}.zip ${{ env.IMAGE_NAME }}.tar
 
-      - name: Upload artifact (Docker image ZIP)
+      - name: Upload artifact (Docker image tar)
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.IMAGE_NAME }}-image-zip
-          path: ${{ env.IMAGE_NAME }}.zip
+          name: ${{ env.IMAGE_NAME }}
+          path: ${{ env.IMAGE_NAME }}.tar
